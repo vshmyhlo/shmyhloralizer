@@ -7,7 +7,10 @@ module Shmyhloralizer
     end
 
     def group_set
-      @group_set ||= Array.wrap(instance_options[:group]).map(&:to_sym).to_set
+      @group_set ||= begin
+        groups = [instance_options[:group]].flatten.compact
+        groups.map(&:to_sym).to_set
+      end
     end
 
     def group?(group_name)
