@@ -32,6 +32,10 @@ class UserSerializer < Shmyhloralizer
 
   has_one :profile
 
+  group :integrations do
+    has_many :integrations
+  end
+
   group :chat do
     has_many :friends
   end
@@ -46,6 +50,12 @@ end
 
 ```ruby
 class UsersController < ApplicationController
+  def index
+    # ...
+
+    render json: users, group: [:chat, :integrations]
+  end
+
   def show
     # ...
 
