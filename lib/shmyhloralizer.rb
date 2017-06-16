@@ -7,8 +7,11 @@ class Shmyhloralizer < ActiveModel::Serializer
     end
   end
 
+  def group_set
+    @group_set ||= Array.wrap(instance_options[:group]).map(&:to_sym).to_set
+  end
+
   def group?(group_name)
-    instance_options[:group] &&
-      instance_options[:group].to_sym == group_name.to_sym
+    group_set.include?(group_name.to_sym)
   end
 end
