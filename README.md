@@ -25,7 +25,7 @@ Or install it yourself as:
 ```ruby
 # app/serializers/user_serializer.rb
 
-class UserSerializer < Shmyhloralizer
+class UserSerializer < Shmyhloralizer::Serializer
   attribute :first_name
   attribute :last_name
   attribute :email

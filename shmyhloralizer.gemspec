@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Vlad Shmyhlo"]
   spec.email         = ["aion.stu@gmail.com"]
 
-  spec.summary       = %q{Configurable serializers based on active_model_serializers}
-  spec.description   = %q{Configurable serializers based on active_model_serializers}
+  spec.summary       = %q{Configurable serializer based on active_model_serializers}
+  spec.description   = %q{Configurable serializer based on active_model_serializers}
   spec.homepage      = "https://github.com/v-shmyhlo/shmyhloralizer"
   spec.license       = "MIT"
 
